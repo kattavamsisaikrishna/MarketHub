@@ -94,8 +94,7 @@ src/main/resources/static/
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/kattavamsisaikrishna/MarketHub.git
 ```
 
 ### 2️⃣ Configure MySQL in `application.properties`
@@ -106,6 +105,8 @@ spring.datasource.password=<your-mysql-password>
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+jwt.secret=<some_secret_key>
+jwt.expiration=900000
 ```
 
 ### 3️⃣ Run the project
