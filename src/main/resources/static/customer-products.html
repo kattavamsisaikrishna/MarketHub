@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browse Products - MarketHub</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="topbar">
+    <div class="topbar-title">MarketHub</div>
+    <div class="topbar-links">
+        <a href="/index.html">Home</a>
+        <a href="/login.html">Login</a>
+        <a href="/register.html">Register</a>
+    </div>
+</div>
+<div class="page-wrapper">
+<h1>Browse Products</h1>
+
+<div class="card">
+    <p>
+        Logged in as: <strong id="customerName"></strong>
+        (<span id="roleLabel"></span>)
+    </p>
+    <button id="logoutBtn">Logout</button>
+</div>
+
+<div class="card">
+    <h2>Available Products</h2>
+
+    <label for="searchInput">Search by name:</label>
+    <input id="searchInput" type="text" placeholder="Type product name...">
+    <button id="searchBtn">Search</button>
+    <button id="clearSearchBtn">Clear</button>
+
+    <table id="productsTable" border="1" cellpadding="4" cellspacing="0" style="margin-top: 10px;">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Seller</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Quantity to Buy</th>
+        </tr>
+        </thead>
+        <tbody id="productsBody">
+        <!-- filled by JS -->
+        </tbody>
+    </table>
+
+    <button id="placeOrderBtn" style="margin-top: 10px;">Place Order</button>
+
+    <p id="message" style="color: red; margin-top: 10px;"></p>
+</div>
+
+<div class="card">
+    <h2>My Orders</h2>
+    <button id="loadOrdersBtn">Refresh Orders</button>
+    <ul id="ordersList">
+        <!-- filled by JS -->
+    </ul>
+</div>
+
+<script src="/js/common.js"></script>
+<script src="/js/customer-products.js"></script>
+</div>
+</body>
+</html>
